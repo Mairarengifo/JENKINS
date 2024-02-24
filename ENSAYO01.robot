@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  Hello World for robotframwork with headless chrome
 Library  SeleniumLibrary
-#Library  OperatingSystem
+Library  OperatingSystem
 #Suite Setup  Setup chromedriver
 ### https://stackoverflow.com/questions/28537290/how-to-set-path-chrome-driver-in-robot-framework
 
