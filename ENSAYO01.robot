@@ -7,5 +7,5 @@ ${CHROMEDRIVER_PATH}    /usr/bin/google-chrome
 *** Test Cases ***
 Ejemplo de prueba
     Set Selenium Implicit Wait    10 seconds
-    Open Browser    https://www.ejemplo.com    Chrome    executable_path=${CHROMEDRIVER_PATH}
+    Open Browser    https://www.ejemplo.com    Chrome
     # Tu código de prueba continua aquí
