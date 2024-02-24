@@ -1,11 +1,16 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library           SeleniumLibrary
 
 *** Variables ***
-${CHROMEDRIVER_PATH}    /usr/bin/google-chrome
+${URL}            https://www.google.com
+${CHROMEDRIVER_PATH}        /usr/bin/chromedriver
 
-*** Test Cases ***
-Ejemplo de prueba
-    Set Selenium Implicit Wait    10 seconds
-    Open Browser    https://www.ejemplo.com    Chrome
-    # Tu código de prueba continua aquí
+*** Keywords ***
+Open Website
+    ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Call Method    ${chrome_options}    add_argument    --headless
+    Open Browser    ${URl}    chrome    options=${chrome_options}      executable_path=${CHROMEDRIVER_PATH}
+
+*** Settings ***
+Suite Setup       Open Website
