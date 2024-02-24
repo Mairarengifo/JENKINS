@@ -6,9 +6,9 @@ Library    OperatingSystem
 ### https://stackoverflow.com/questions/28537290/how-to-set-path-chrome-driver-in-robot-framework
 
 *** Keywords ****
-#Setup chromedriver
-   Set Environment Variable    webdriver.chrome.driver    /usr/bin/chromedriver
-   Set Environment Variable    webdriver.chrome.binary    /usr/bin/google-chrome
+    #Setup chromedriver
+    Set Environment Variable    webdriver.chrome.driver    /usr/bin/chromedriver
+    Set Environment Variable    webdriver.chrome.binary    /usr/bin/google-chrome
 *** Test Cases ***
 User shall call google and make a screenshot
     [Documentation]  First test
