@@ -12,5 +12,6 @@ Open Website
     Call Method    ${chrome_options}    add_argument    --headless
     Open Browser    ${URl}    chrome    options=${chrome_options}      executable_path=${CHROMEDRIVER_PATH}
 
-*** Settings ***
-Suite Setup       Open Website
+*** Test Cases ***
+TC001 Browser Start and Close
+    Open Website
